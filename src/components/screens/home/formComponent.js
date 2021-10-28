@@ -1,5 +1,5 @@
 import { useHistory } from "react-router";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { SelectComponent } from "../../formControl/selectComponent";
@@ -8,6 +8,7 @@ import { CheckBoxComponent } from "../../formControl/checkboxComponent";
 import { ButtonComponent } from "../../formControl/buttonComponent";
 import { AuthContext } from "../../../context/authContext";
 import "./form.scss";
+import { loginUser } from "../../../service/userService";
 
 const initialValues = {
 	tipoD: "dni",
@@ -31,6 +32,7 @@ const validationSchema = Yup.object().shape({
 export const FormComponent = () => {
 	const history = useHistory();
 	const { getDateUser } = useContext(AuthContext);
+	const [loading, setLoading] = useState(false);
 	const formik = useFormik({
 		initialValues,
 		validationSchema,
@@ -39,14 +41,31 @@ export const FormComponent = () => {
 		},
 	});
 
-	const handleSubmit = (values) => {
-		getDateUser(values);
-		history.push("/arma-tu-plan");
+	const handleSubmit = async (values) => {
+		setLoading(true);
+		let param = {
+			...values,
+			email: "jose@gmail.com",
+			name: "Jose",
+		};
+		try {
+			const rpta = await loginUser(param);
+			if (rpta.status === 201) {
+				console.log(rpta.data);
+				getDateUser(rpta.data);
+				setLoading(false);
+				history.push("/arma-tu-plan");
+			}
+		} catch (error) {
+			setLoading(false);
+			console.log(error.response);
+			alert("Ha ocurrido un error");
+		}
 	};
 
 	return (
 		<div className="form__container">
-			<form className="form">
+			<form className="form" autoComplete="off">
 				<h2 className="form__title">Déjanos tus datos</h2>
 				<div className="d-flex w100">
 					<SelectComponent
@@ -109,6 +128,7 @@ export const FormComponent = () => {
 					variant="primary"
 					text="COTÍZALO"
 					onClick={formik.handleSubmit}
+					disabled={loading}
 				/>
 			</form>
 		</div>

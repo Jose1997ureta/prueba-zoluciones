@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoRimac from "../../images/logo.png";
+import logoRimac from "../../images/logo.svg";
 import { FaPhoneAlt } from "react-icons/fa";
 import "../../styles/header.scss";
 
@@ -7,7 +7,9 @@ export const HeaderComponent = ({ boxShadow = true }) => {
 	return (
 		<header className={`header__container ${boxShadow && "header__shadow"}`}>
 			<nav className="header l-container">
-				<img src={logoRimac} className="header__logo" alt="logo-rimac" />
+				<Link to="/">
+					<img src={logoRimac} className="header__logo" alt="logo-rimac" />
+				</Link>
 				<div className="menu">
 					<Link className="menu__item" to="/">
 						¿Tienes alguna duda?

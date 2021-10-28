@@ -12,7 +12,7 @@ import { LayoutContext } from "../../../context/layoutContext";
 export const PresupuestoComponent = () => {
 	const history = useHistory();
 	const { windowSize } = useContext(LayoutContext);
-	const { deleteDateUser } = useContext(AuthContext);
+	const { deleteDateUser, user } = useContext(AuthContext);
 	const [tabSelect, SetTabSelect] = useState("1");
 
 	const handleSelectTab = (id) => {
@@ -40,7 +40,7 @@ export const PresupuestoComponent = () => {
 			{windowSize.width > 768 ? (
 				<>
 					<h1 className="presupuesto__title">
-						¡Hola, <span>Juan!</span>
+						¡Hola, <span>{user?.name}!</span>
 					</h1>
 					<p className="presupuesto__description">
 						Conoce las coberturas para tu presupuesto
@@ -58,7 +58,7 @@ export const PresupuestoComponent = () => {
 
 			{/* PLACA */}
 			<div className="card">
-				<h3 className="card__placa">Placa: C2U-114</h3>
+				<h3 className="card__placa">Placa: {user?.placa}</h3>
 				<h2 className="card__description">Wolkswagen 2019 Golf</h2>
 				<img src={Person1Image} className="card__image" alt="imageplaca" />
 			</div>

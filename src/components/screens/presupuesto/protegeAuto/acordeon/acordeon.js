@@ -1,6 +1,7 @@
 import { FaAngleUp, FaAngleDown, FaPlus, FaMinus } from "react-icons/fa";
 import "./acordeon.scss";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../../../context/authContext";
 
 export const AcordeonComponent = ({
 	activeC = false,
@@ -8,9 +9,19 @@ export const AcordeonComponent = ({
 	title,
 	text,
 	image,
+	id,
+	value,
 }) => {
+	const { changeCoberturaUser } = useContext(AuthContext);
 	const [isTab, setIsTab] = useState(activeT);
 	const [isVisible, setIsVisible] = useState(activeC);
+
+	useEffect(() => {
+		if (activeC) {
+			changeCoberturaUser(id, value);
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	const handleChangeStateTab = () => {
 		setIsTab((value) => !value);
@@ -22,9 +33,11 @@ export const AcordeonComponent = ({
 		if (visible) {
 			setIsVisible(true);
 			setIsTab(true);
+			changeCoberturaUser(id, value);
 		} else {
 			setIsVisible(false);
 			setIsTab(false);
+			changeCoberturaUser(id, 0);
 		}
 	};
 

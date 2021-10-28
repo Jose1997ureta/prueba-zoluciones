@@ -11,7 +11,7 @@ export const BannerComponent = () => {
 		<div className="banner__container">
 			<div className="l-container banner ">
 				<div className="banner__img">
-					{windowSize.width < 768 ? (
+					{windowSize.width < 769 ? (
 						<img src={Person1MovilImage} alt="Person1Image" />
 					) : (
 						<img src={Person1Image} alt="Person1Image" />
