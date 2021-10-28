@@ -27,7 +27,7 @@
 		align-items: center;
 
 		&:first-child {
-			@media (max-width: 375px) {
+			@media (max-width: 768px) {
 				display: none;
 			}
 		}

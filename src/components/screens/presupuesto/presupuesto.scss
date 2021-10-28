@@ -1,11 +1,21 @@
 .presupuesto {
-	padding: 48px 93px;
 	background-color: #fff;
+	@media screen and (min-width: 768px) {
+		padding: 48px 93px;
+	}
+	@media screen and (max-width: 768px) {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	/* ICON BACK */
 	&__return {
 		display: flex;
 		align-items: center;
 		margin-bottom: 24px;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 
 		&--button {
 			width: 24px;
@@ -40,6 +50,11 @@
 		font-weight: 400;
 		color: #494f66;
 		margin-bottom: 8px;
+		@media screen and (max-width: 768px) {
+			font-size: 28px;
+			line-height: 36px;
+		}
+
 		> span {
 			color: var(--primary);
 		}
@@ -85,11 +100,16 @@
 }
 /* CONTADOR */
 .suma {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
 	&__content {
+		@media screen and (max-width: 768px) {
+			margin-bottom: 16px;
+		}
 		&--text {
 			font-size: 16px;
 			line-height: 24px;
@@ -112,6 +132,10 @@
 	background-color: var(--border);
 	margin-top: 43px;
 	margin-bottom: 55px;
+
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
 }
 
 /* COBERTURA */
@@ -136,7 +160,7 @@
 		font-size: 10px;
 		line-height: 16px;
 		font-weight: bold;
-		padding: 5px 35px 25px;
+		padding: 5px 30px 25px;
 		border-bottom: 1px solid var(--border);
 
 		display: flex;
@@ -145,6 +169,11 @@
 		text-align: center;
 
 		cursor: pointer;
+
+		@media screen and (max-width: 768px) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 
 		&.active {
 			border-bottom: 2px solid var(--primary);

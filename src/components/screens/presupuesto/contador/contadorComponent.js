@@ -3,17 +3,17 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 import { FORMAT_NUMBER_MONTO } from "../../../../functions/utils";
 import "./contador.scss";
 
-export const ContenedorComponent = ({ max, min }) => {
+export const ContadorComponent = ({ max, min }) => {
 	const [contador, setContador] = useState(min);
 
 	const handleMinus = () => {
 		if (contador > min) {
-			setContador((value) => value - 500);
+			setContador((value) => value - 100);
 		}
 	};
 	const handlePlus = () => {
 		if (contador < max) {
-			setContador((value) => value + 500);
+			setContador((value) => value + 100);
 		}
 	};
 

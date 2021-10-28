@@ -1,13 +1,13 @@
-import "../../../styles/form.scss";
+import { useHistory } from "react-router";
+import { useContext } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { SelectComponent } from "../../formControl/selectComponent";
 import { InputComponent } from "../../formControl/inputComponent";
 import { CheckBoxComponent } from "../../formControl/checkboxComponent";
 import { ButtonComponent } from "../../formControl/buttonComponent";
-import { useHistory } from "react-router";
-import { useContext } from "react";
 import { AuthContext } from "../../../context/authContext";
+import "./form.scss";
 
 const initialValues = {
 	tipoD: "dni",

@@ -2,6 +2,9 @@
 	&__container {
 		padding-top: 189px;
 		background-color: #fff;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 
 	&__title {

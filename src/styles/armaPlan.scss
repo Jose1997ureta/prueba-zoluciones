@@ -1,0 +1,16 @@
+.plan {
+	@media screen and (min-width: 768px) {
+		display: grid;
+		grid-template-columns: 2fr 4fr 2fr;
+		width: 95%;
+		margin-left: auto;
+	}
+
+	&__container {
+		background-color: #f7f8fc;
+
+		@media screen and (max-width: 768px) {
+			background-color: #fff;
+		}
+	}
+}

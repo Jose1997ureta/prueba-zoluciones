@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Person1Image from "../../../images/bg2.svg";
 import Person1MovilImage from "../../../images/bg2-movil.svg";
-import "../../../styles/banner.scss";
+import "./banner.scss";
 import { LayoutContext } from "../../../context/layoutContext";
 
 export const BannerComponent = () => {
