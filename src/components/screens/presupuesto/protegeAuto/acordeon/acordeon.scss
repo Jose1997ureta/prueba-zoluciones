@@ -1,0 +1,69 @@
+.acordeon {
+	padding-bottom: 32px;
+	padding-top: 32px;
+	border-bottom: 1px solid var(--border);
+	&__header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		&--content {
+			display: flex;
+		}
+
+		&--icon {
+			color: var(--primary);
+			cursor: pointer;
+		}
+	}
+
+	&__info {
+		&--img {
+			margin-right: 24px;
+		}
+		&--text {
+			font-size: 20px;
+			line-height: 28px;
+			color: #494f66;
+			margin-bottom: 12px;
+		}
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		&--icon {
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			border: 1px solid var(--third);
+			background-color: #fff;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 12px;
+
+			> .icon {
+				color: var(--third);
+			}
+		}
+
+		&--text {
+			font-size: 12px;
+			line-height: 16px;
+			letter-spacing: 0.6px;
+			text-transform: uppercase;
+			color: var(--third);
+			font-weight: bold;
+		}
+	}
+
+	&__content {
+		font-size: 14px;
+		line-height: 24px;
+		color: #676f8f;
+		padding-left: 71px;
+		margin-top: 16px;
+	}
+}

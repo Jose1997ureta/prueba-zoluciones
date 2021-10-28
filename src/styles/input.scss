@@ -1,0 +1,22 @@
+.form__control {
+	&--input {
+		width: 100%;
+		border: 1px solid var(--border);
+		padding: 15px;
+		border-radius: 4px;
+		color: #a3abcc;
+		font-size: 16px;
+
+		&__inline {
+			width: 60%;
+
+			@media screen and (max-width: 768px) {
+				width: 70%;
+			}
+
+			> input {
+				border-radius: 0 4px 4px 0;
+			}
+		}
+	}
+}

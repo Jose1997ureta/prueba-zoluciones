@@ -1,0 +1,66 @@
+.monto {
+	&__container {
+		padding-top: 189px;
+		background-color: #fff;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: 0.6px;
+		text-transform: uppercase;
+		color: #494f66;
+		margin-bottom: 10px;
+	}
+
+	&__price {
+		font-size: 28px;
+		line-height: 36px;
+		letter-spacing: -0.2px;
+		color: #494f66;
+		margin-bottom: 4px;
+	}
+
+	&__month {
+		font-size: 12px;
+		line-height: 20px;
+		letter-spacing: 0.2px;
+		color: #676f8f;
+	}
+
+	&__line {
+		height: 1px;
+		width: 60%;
+		background-color: var(--border);
+		margin-top: 19px;
+		margin-bottom: 24px;
+	}
+}
+
+.oferta {
+	&__title {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.2px;
+		color: #494f66;
+		margin-bottom: 12px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+		&--icon {
+			font-size: 12px;
+			margin-right: 19px;
+			color: #43b748;
+		}
+
+		&--text {
+			font-size: 14px;
+			line-height: 24px;
+			color: #676f8f;
+		}
+	}
+}

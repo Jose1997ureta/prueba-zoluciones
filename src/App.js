@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import "./styles/App.scss";
+import { AuthProvider } from "./context/authContext";
+import { HomePage } from "./pages/homePage";
+import { LayoutProvider } from "./context/layoutContext";
+import { ArmaTuPlanPage } from "./pages/ArmaTuPlan/armaTuPlanPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export const App = () => {
+	return (
+		<LayoutProvider>
+			<AuthProvider>
+				<BrowserRouter>
+					<Switch>
+						<Route path="/" exact component={HomePage} />
+						<Route
+							path="/arma-tu-plan"
+							exact
+							component={ArmaTuPlanPage}
+						/>
+						<Route path="*">
+							<Redirect to="/" />
+						</Route>
+					</Switch>
+				</BrowserRouter>
+			</AuthProvider>
+		</LayoutProvider>
+	);
+};

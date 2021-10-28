@@ -1,0 +1,55 @@
+.timeLine {
+	&__container {
+		padding-top: 48px;
+		background-color: #f7f8fc;
+	}
+
+	display: flex;
+	align-items: center;
+	margin-bottom: 44px;
+	position: relative;
+
+	&:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		width: 40px;
+		border: 1px dashed var(--border);
+		transform: rotate(-90deg);
+		top: 185%;
+		left: -8px;
+	}
+
+	&.active {
+		> .timeLine__button {
+			background-color: var(--third);
+			border: none;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		> .timeLine__text {
+			color: #494f66;
+		}
+	}
+
+	&__button {
+		background-color: transparent;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		border: 1px solid var(--border);
+		margin-right: 16px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #c5cbe0;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.2px;
+		color: #a3abcc;
+	}
+}

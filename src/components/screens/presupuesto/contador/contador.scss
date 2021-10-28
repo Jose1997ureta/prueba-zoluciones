@@ -1,0 +1,22 @@
+.contador {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	padding: 19px;
+	width: 160px;
+	&__minus {
+		color: var(--third);
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		color: #494f66;
+	}
+
+	&__plus {
+		color: var(--third);
+	}
+}

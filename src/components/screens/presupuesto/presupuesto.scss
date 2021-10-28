@@ -1,0 +1,155 @@
+.presupuesto {
+	padding: 48px 93px;
+	background-color: #fff;
+	/* ICON BACK */
+	&__return {
+		display: flex;
+		align-items: center;
+		margin-bottom: 24px;
+
+		&--button {
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			background-color: #fff;
+			border: 1px solid var(--primary);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 16px;
+
+			cursor: pointer;
+
+			&__icon {
+				color: var(--primary);
+			}
+		}
+		&--text {
+			color: #a3abcc;
+			font-size: 12px;
+			line-height: 16px;
+			text-transform: uppercase;
+		}
+	}
+
+	/* TITLE */
+	&__title {
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: 400;
+		color: #494f66;
+		margin-bottom: 8px;
+		> span {
+			color: var(--primary);
+		}
+	}
+
+	&__description {
+		font-size: 16px;
+		line-height: 28px;
+		color: #676f8f;
+		margin-bottom: 44px;
+	}
+}
+
+/* CARD */
+.card {
+	border: 3px solid var(--border);
+	border-radius: 12px;
+	padding: 32px;
+	position: relative;
+	height: 177px;
+	margin-bottom: 55px;
+	&__placa {
+		font-size: 12px;
+		line-height: 20px;
+		color: #a3abcc;
+		font-weight: 400;
+	}
+
+	&__description {
+		font-size: 20px;
+		line-height: 28px;
+		color: #494f66;
+		font-weight: 400;
+		width: 40%;
+	}
+
+	&__image {
+		position: absolute;
+		right: 32px;
+		top: -10px;
+		height: 181px;
+	}
+}
+/* CONTADOR */
+.suma {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__content {
+		&--text {
+			font-size: 16px;
+			line-height: 24px;
+			color: #494f66;
+			margin-bottom: 4px;
+		}
+		&--monto {
+			font-size: 12px;
+			line-height: 16px;
+			color: #676f8f;
+			letter-spacing: 0.6px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.line__container {
+	height: 1px;
+	width: 100%;
+	background-color: var(--border);
+	margin-top: 43px;
+	margin-bottom: 55px;
+}
+
+/* COBERTURA */
+.cobertura {
+	&__title {
+		font-size: 20px;
+		line-height: 28px;
+		color: #494f66;
+		margin-bottom: 32px;
+	}
+}
+
+/* TAB */
+.tab {
+	display: flex;
+	// justify-content: space-between;
+
+	&__item {
+		width: calc(100% / 3);
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		font-size: 10px;
+		line-height: 16px;
+		font-weight: bold;
+		padding: 5px 35px 25px;
+		border-bottom: 1px solid var(--border);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		cursor: pointer;
+
+		&.active {
+			border-bottom: 2px solid var(--primary);
+			color: var(--primary);
+			font-weight: bold;
+		}
+	}
+}

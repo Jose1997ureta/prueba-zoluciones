@@ -1,0 +1,23 @@
+.form__control {
+	&--select {
+		width: 100%;
+		border-width: 1px 0 1px 1px;
+		border-color: var(--border);
+		border-style: solid;
+		text-transform: uppercase;
+		padding: 15px;
+		border-radius: 4px;
+
+		&__inline {
+			width: 40%;
+
+			@media screen and (max-width: 768px) {
+				width: 30%;
+			}
+
+			> select {
+				border-radius: 4px 0 0 4px;
+			}
+		}
+	}
+}
