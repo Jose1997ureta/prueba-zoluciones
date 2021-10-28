@@ -3,8 +3,25 @@
 		padding-top: 189px;
 		background-color: #fff;
 		@media screen and (max-width: 768px) {
-			display: none;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 14px 0;
+			background-color: #fff;
+			box-shadow: 0px 1px 4px rgba(163, 171, 204, 0.06),
+				0px 8px 30px rgba(20, 43, 127, 0.1);
 		}
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__title {
@@ -15,21 +32,41 @@
 		text-transform: uppercase;
 		color: #494f66;
 		margin-bottom: 10px;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 
 	&__price {
-		font-size: 28px;
-		line-height: 36px;
-		letter-spacing: -0.2px;
-		color: #494f66;
-		margin-bottom: 4px;
-	}
+		&--text {
+			font-size: 28px;
+			line-height: 36px;
+			letter-spacing: -0.2px;
+			color: #494f66;
+			margin-bottom: 4px;
 
-	&__month {
-		font-size: 12px;
-		line-height: 20px;
-		letter-spacing: 0.2px;
-		color: #676f8f;
+			@media screen and (max-width: 768px) {
+				font-size: 24px;
+				line-height: 32px;
+				letter-spacing: -0.2px;
+				color: #494f66;
+			}
+		}
+
+		&--month {
+			font-size: 12px;
+			line-height: 20px;
+			letter-spacing: 0.2px;
+			color: #676f8f;
+			@media screen and (max-width: 768px) {
+				font-weight: bold;
+				font-size: 10px;
+				line-height: 16px;
+				letter-spacing: 0.8px;
+				text-transform: uppercase;
+				color: #494f66;
+			}
+		}
 	}
 
 	&__line {
@@ -38,10 +75,22 @@
 		background-color: var(--border);
 		margin-top: 19px;
 		margin-bottom: 24px;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__button {
+		@media screen and (min-width: 768px) {
+			margin-top: 32px;
+		}
 	}
 }
 
 .oferta {
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
 	&__title {
 		font-size: 16px;
 		line-height: 24px;
