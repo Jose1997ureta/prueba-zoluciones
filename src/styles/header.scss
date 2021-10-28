@@ -46,13 +46,13 @@
 		margin-right: 5px;
 
 		&--number {
-			@media screen and (max-width: 376px) {
+			@media screen and (max-width: 768px) {
 				display: none;
 			}
 		}
 
 		&--text {
-			@media screen and (min-width: 376px) {
+			@media screen and (min-width: 769px) {
 				display: none;
 			}
 		}

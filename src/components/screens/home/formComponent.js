@@ -69,7 +69,6 @@ export const FormComponent = () => {
 				<h2 className="form__title">Déjanos tus datos</h2>
 				<div className="d-flex w100">
 					<SelectComponent
-						placeHolderInput="Nro. de doc"
 						name="tipoD"
 						value={formik.values.tipoD}
 						onChange={formik.handleChange}
