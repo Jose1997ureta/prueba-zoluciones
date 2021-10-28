@@ -21,7 +21,7 @@ No entendi las indicaciones del maximo y minimo, pero esta la funcionalidad de a
 
 ## Ejecutar el Proyecto
 
-Clone la aplicacion con el enlace con el comando: git clone [https://github.com/Jose1997ureta/prueba-zoluciones](https://github.com/Jose1997ureta/prueba-zoluciones) 
+Clone la aplicacion con el comando: git clone [https://github.com/Jose1997ureta/prueba-zoluciones](https://github.com/Jose1997ureta/prueba-zoluciones) 
 
 Ejecutar el comando `npm i` se les instalar las dependencias necesarias para el funcionamiento de la aplicación.
 
